@@ -52,7 +52,7 @@ class BookingSchedulerTest(unittest.TestCase):
         new_schedule = Schedule(different_hour, UNDER_CAPACITY, CUSTOMER)
         self.booking_scheduler.add_schedule(new_schedule)
 
-        self.assertEqual("Number of people is over restaurant capacity per hour", str(context.exception))
+        self.assertTrue(self.booking_scheduler.has_schedule(schedule))
 
     def test_예약완료시_SMS는_무조건_발송(self):
         pass
