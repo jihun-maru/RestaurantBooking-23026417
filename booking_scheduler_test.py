@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 from unittest.mock import Mock, patch
 
 from booking_scheduler import BookingScheduler
-from communication_test import TestableSmsSender, TestableMailSender
 from schedule import Customer, Schedule
 
 UNDER_CAPACITY = 1
